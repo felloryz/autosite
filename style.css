@@ -32,12 +32,18 @@ body {
     background-color: rgb(198, 228, 255);
     color: black;
 }
+.nav-right {
+    background-color: rgb(83, 136, 179)
+}
 .sidebar {
     position: sticky;
     top: 48px;
     float: left;
     width: 320px;
-    padding: 5px 5px 5px 30px;
+    padding: 20px 5px 5px 30px;
+}
+.sidebar b {
+    font-size: 24px;
 }
 .content {
     margin-left: 320px;
@@ -82,23 +88,11 @@ body {
 .desc span {
     font-weight: bold;
 }
-.about h3 {
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 .frame {
     float: left;
     margin-left: 15px;
     width: 230px;
     height: 250px;
-}
-.service h3 {
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
 .block {
     font-weight: inherit;
@@ -107,12 +101,6 @@ body {
     width: auto;
     height: 70px;
     padding: 15px 15px 0 15px;
-}
-.price h3 {
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
 .pricelist {
     margin-left: 15px;
@@ -127,12 +115,6 @@ body {
 .pricelist tr:hover {
     background-color:rgb(198, 228, 255);
 }
-.contract h3 {
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 #name, #email-phone {
     width: 60%;
     padding: 12px 20px;
@@ -143,6 +125,7 @@ body {
     padding-left: 15px;
 }
 #submit {
+    margin: 5px;
     background-color: rgb(87, 155, 214);
     color: white;
     padding: 12px 20px;
@@ -153,4 +136,89 @@ body {
 #submit:hover {
     background-color: rgb(39, 132, 214);
     color: white;
+}
+.news {
+    margin: 20px;
+}
+.article-news h5 {
+    font-style: oblique;
+    font-size: 20px;
+    margin: 5px;
+}
+.article-news > p {
+    background-color: rgb(198, 229, 255);
+    width: 70%;
+    margin: 5px;
+    padding: 10px;
+}
+.article-news textarea {
+    margin: 5px;
+    width: 50%;
+    height: 60px;
+    padding: 5px;
+    border: 2px solid rgb(87, 155, 214);
+    background-color: ghostwhite;
+    font-size: 16px;
+    resize: none;
+}
+.comment {
+    border: 1px dotted black;
+    margin: 20px 5px;
+    width: 50%;
+}
+h6 {
+    font-style: normal;
+    font-size: 15px;
+    margin: 5px;
+}
+.comment p {
+    margin: 5px;
+}
+h3 {
+    font-size: 35px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+h5 {
+    font-style: oblique;
+    font-size: 20px;
+    margin: 5px;
+}
+.feedback {
+    margin-left: 15px;
+}
+.feedback form {
+    margin: 6px;
+}
+.feedback textarea {
+    width: 60%;
+    height: 120px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(87, 155, 214);
+    background-color: ghostwhite;
+    font-size: 16px;
+    resize: none;
+}
+#submit1 {
+    background-color: rgb(87, 155, 214);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    float: left;
+}
+.reviews {
+    margin: 30px 15px;
+}
+.rev {
+    padding: 5px;
+    background-color: rgb(199, 231, 255);
+    margin: 20px 5px;
+    width: 60%;
+}
+.rev p {
+    margin: 5px;
 }
