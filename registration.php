@@ -14,7 +14,6 @@
 	// $password = $_POST["pass1"];
 
     $sql_pass="fedor2005";
-
 	$link = mysqli_connect("localhost", "u0879353_fedya", $sql_pass, "u0879353_autosite") or die("Ошибка " . mysqli_error($link));// подключаемся к серверу
 
 	$email_valid = preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i", $email) && preg_match("/(?:[a-zA-Z0-9])/i", $email);
@@ -46,7 +45,7 @@
 	}
 	if (!$mail_valid && !$password_valid && !$login_valid)
 	{
-		echo "<a href='index.html'>Вернитесь обратно</a>";
+		echo "Вернитесь назад";
 		exit();
 	} 
 	echo "Данные ведены верно";
@@ -58,7 +57,7 @@
 		$row = mysqli_fetch_array($res);//вытаскиваем данные из запроса
 		if ($row['email'] == "$email" or $row['login'] == "$login"){
 			echo "Аккаунт с таким адресом электронной почты/логином уже существует";
-			echo "<a href='index.html'>Вернитесь обратно</a>";
+			echo "Вернитесь назад";
 		} else {
 			$query = "INSERT INTO users (email, login, password) VALUES ('$email','$login','$password')";
 			$result = mysqli_query($link ,$query);
