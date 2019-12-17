@@ -1,3 +1,6 @@
+<?php 
+    session_start();   
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,17 +11,42 @@
         <div class="header">
             <h1>АвтоПодбор</h1>
             <h3>Подбор автомобиля под ключ</h3>
-            <a href="#" class="button">Оставить заявку</a>
+
+            <?php
+                if ($_SESSION['login']) {
+                    echo '<a href="#" class="button">Оставить заявку</a>';
+                } else {
+                    echo '<a href="registration.html" class="button">Зарегистрируйтесь,<br>
+                    чтобы оставить заявку</a>';
+                }
+            ?>
+
+            <!-- <a href="#" class="button">Оставить заявку</a> -->
+
         </div>
         <div class="nav">
             <a href="#about">О нас</a>
             <a href="#service">Услуги</a>
             <a href="#price">Прайс</a>
             <a href="#contract">Договор</a>
-            <a href="news.html">Новости и акции</a>
-            <a href="review.html">Отзывы</a>
-            <a href="registration.html" style="float:right" class="nav-right">Зарегистрироваться</a>
-            <a href="#" style="float:right">Войти</a>
+            <a href="news.php">Новости и акции</a>
+            <!-- <a href="review.php">Отзывы</a> -->
+
+            <?php
+                if ($_SESSION['login']) {
+                    echo '
+                        <a href="logout.php" style="float:right" class="nav-right">Выйти</a>
+                        <a href="#" style="float:right">Здравствуйте, '. $_SESSION['login'].'</a>';
+                } else {
+                    echo '
+                        <a href="registration.html" style="float:right" class="nav-right">Зарегистрироваться</a>
+                        <a href="login.html" style="float:right">Войти</a>';
+                }
+            ?>
+
+            <!-- <a href="registration.html" style="float:right" class="nav-right">Зарегистрироваться</a>
+            <a href="login.html" style="float:right">Войти</a> -->
+
         </div>
         <div class="sidebar">
             <b>АвтоПодбор</b>
@@ -28,7 +56,18 @@
                 <li>Телефон +7 985 621 44 10</li>
                 <li>Email fed-rizh@yandex.ru</li>
             </ul>
-            <a href="#" class="button">Оставить заявку</a>
+
+            <?php
+                if ($_SESSION['login']) {
+                    echo '<a href="#" class="button">Оставить заявку</a>';
+                } else {
+                    echo '<a href="registration.html" class="button">Зарегистрируйтесь,<br>
+                    чтобы оставить заявку</a>';
+                }
+            ?>
+
+            <!-- <a href="#" class="button">Оставить заявку</a> -->
+
         </div>
         <div class="content">
             <a name="about"></a><br>
