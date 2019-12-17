@@ -23,6 +23,11 @@
                                 <a href="login.html" style="float:right">Войти</a>';
                         }
                     ?>
+                    <?php
+                        if ($_SESSION['login'] == 'admin12345') {
+                            echo '<a href="zav_all.php">Заявки</a>';
+                    } 
+            ?>
 
             </div>
             <div class="sidebar">
@@ -36,7 +41,7 @@
 
                     <?php
                         if ($_SESSION['login']) {
-                            echo '<a href="#" class="button">Оставить заявку</a>';
+                            echo '<a href="zav.html" class="button">Оставить заявку</a>';
                         } else {
                             echo '<a href="registration.html" class="button">Зарегистрируйтесь,<br>
                             чтобы оставить заявку</a>';
