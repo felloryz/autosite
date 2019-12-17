@@ -14,7 +14,7 @@
 
             <?php
                 if ($_SESSION['login']) {
-                    echo '<a href="#" class="button">Оставить заявку</a>';
+                    echo '<a href="zav.html" class="button">Оставить заявку</a>';
                 } else {
                     echo '<a href="registration.html" class="button">Зарегистрируйтесь,<br>
                     чтобы оставить заявку</a>';
@@ -28,7 +28,7 @@
             <a href="#about">О нас</a>
             <a href="#service">Услуги</a>
             <a href="#price">Прайс</a>
-            <a href="#contract">Договор</a>
+            <!-- <a href="#contract">Договор</a> -->
             <a href="news.php">Новости и акции</a>
             <!-- <a href="review.php">Отзывы</a> -->
 
@@ -42,6 +42,12 @@
                         <a href="registration.html" style="float:right" class="nav-right">Зарегистрироваться</a>
                         <a href="login.html" style="float:right">Войти</a>';
                 }
+            ?>
+
+            <?php
+                if ($_SESSION['login'] == 'admin12345') {
+                    echo '<a href="zav_all.php">Заявки</a>';
+                } 
             ?>
 
             <!-- <a href="registration.html" style="float:right" class="nav-right">Зарегистрироваться</a>
@@ -59,7 +65,7 @@
 
             <?php
                 if ($_SESSION['login']) {
-                    echo '<a href="#" class="button">Оставить заявку</a>';
+                    echo '<a href="zav.html" class="button">Оставить заявку</a>';
                 } else {
                     echo '<a href="registration.html" class="button">Зарегистрируйтесь,<br>
                     чтобы оставить заявку</a>';
@@ -166,7 +172,7 @@
                   <br clear="all">
             </div>
             <a name="contract"></a><br>
-            <div class="contract">
+            <!-- <div class="contract">
                     <h3>Ознакомьтесь с нашим договором</h3>
                     <form class="dogovor">
                         <label for="fname">Полное имя</label><br>
@@ -176,7 +182,7 @@
                         <input type="submit" id="submit" value="Скачать договор">
                     </form>
                     <br clear="all">
-            </div>
+            </div> -->
         </div>
         <div class="footer">
             <p>Рыжов Фёдор для ИУ4</p>
