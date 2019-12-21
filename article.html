@@ -3,13 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Article</title>
+	<style>
+	textarea {
+		width: 300px;
+		height: 150px;
+	}
+	</style>
 </head>
 <body>
 	<form action="article.php" method="post">
-		Title
-		<input type="text" name="title">
-		Text
-		<input type="text" name="article_text">
+		Title<br>
+		<textarea type="text" name="title"></textarea><br>
+		Text<br>
+		<textarea type="text" name="article_text"></textarea><br>
 		<input type="submit">
 	</form>
 </body>

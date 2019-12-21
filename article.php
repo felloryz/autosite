@@ -16,12 +16,15 @@
 	$query = "INSERT INTO `article` (`title`, `text`) VALUES ('$title','$article_text')";
 	$result = mysqli_query($link, $query);
 
-	$query = "SELECT * FROM article";
+	/*$query = "SELECT * FROM article";
 	$result = mysqli_query($link, $query);
 	while ($row = mysqli_fetch_array($result)) {
 		echo $row['title'] . ' ';
 		echo $row['text'] . '<br>';
-	}
+	}*/
+	
+	echo '<a href="news.php">Обратно к новостям</a><br>
+	<a href="index.php">Вернуться на главную</a>';
 
 	} else {
 		echo 'Вы не администратор';

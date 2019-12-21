@@ -1,0 +1,38 @@
+<?php
+session_start();
+
+if (isset($_POST["title"])) {
+	$title = $_POST["title"];
+}
+
+if (isset($_POST["article_text"])) {
+	$article_text = $_POST["article_text"];
+}
+
+$id = $_SESSION['id'];
+
+if ($_SESSION['login'] == 'admin12345') {
+	$sql_pass="fedor2005";
+	$link = mysqli_connect("localhost", "u0879353_fedya", $sql_pass, "u0879353_autosite") 
+	or die("Ошибка " . mysqli_error($link));
+	
+	$query = "UPDATE article SET title = '$title' WHERE id = $id";
+	$result = mysqli_query($link, $query); 
+	
+	$query = "UPDATE article SET text = '$article_text' WHERE id = $id";
+	$result = mysqli_query($link, $query); 
+	
+	/* $query = "SELECT * FROM article";
+	$result = mysqli_query($link, $query);
+	while ($row = mysqli_fetch_array($result)) {
+		echo $row['title'] . ' ';
+		echo $row['text'] . '<br>';
+	} */
+	
+	header("Location: news.php");
+	
+	/* echo '<a href="news.php">Обратно к новостям</a><br>
+	<a href="index.php">Вернуться на главную</a>'; */
+}
+
+?>

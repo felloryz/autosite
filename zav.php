@@ -16,7 +16,8 @@ if ($_SESSION['login']) {
 	$query = "INSERT INTO `zav` (`zav_num`, `zav_text`) VALUES ('$zav_num','$zav_text')";
 	$result = mysqli_query($link, $query);
 
-	echo 'Заявка успешно оставлена';
+	echo 'Заявка успешно оставлена<br>';
+	echo '<a href="index.php">Вернуться на главную</a>';
 
 	/* $query = "SELECT * FROM zav";
 	$result = mysqli_query($link, $query);

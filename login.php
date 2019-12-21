@@ -20,6 +20,7 @@
 		if ($row['login'] == "$login_log" && $row['password'] == "$pass_log"){
 			$_SESSION['login'] = $login_log;
 			echo "Вы успешно вошли";
+			echo '<br>';
 			echo '<a href ="index.php">Перейдите на главную<a>';
 		}
 		else{

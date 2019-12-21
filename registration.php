@@ -64,6 +64,7 @@
 			if ($res){
 				echo "<hr>";
 				echo "Регистрация пройдена успешно";
+				echo '<br>';
 				echo "<a href='login.html'>Войти</a>";
 			}	
 		}

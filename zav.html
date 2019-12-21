@@ -3,13 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<title>Zayavka</title>
+	<style>
+	textarea {
+		width: 300px;
+		height: 150px;
+	}
+	input {
+		width: 300px;
+	}
+	</style>
 </head>
 <body>
 	<form action="zav.php" method="post">
-		Данные для обратной свзяи
-		<input type="text" name="zav_num">
-		Заявка
-		<input type="text" name="zav_text">
+		Данные для обратной свзяи<br>
+		<i>(Адрес эл. почты или номер телефона)</i><br>
+		<input type="text" name="zav_num"><br>
+		Заявка<br>
+		<textarea type="text" name="zav_text"></textarea><br>
 		<input type="submit">
 	</form>
 </body>
